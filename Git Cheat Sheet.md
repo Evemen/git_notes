@@ -1,4 +1,4 @@
-# Git Cheat Sheet
+# [Git Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
 
 ## Configure Tooling
 
@@ -73,3 +73,44 @@ Git sees every file in your working copy as one of three things:
 
 Ignored files are usually build artifacts and machine generated files that can be derived from your repository source or should otherwise not be committed. 
 
+## Save Fragments
+
+Shelve and restore incomplete changes
+
+```sh
+git stash
+git stash list
+git stash pop
+git stash drop
+```
+
+## Review History
+
+Browse and inspect the evolution of project files
+
+```sh
+git log
+git log --follow [file]
+git diff [first-branch] [second-branch]
+git show [commit]
+```
+
+## Redo Commits
+
+Erase mistakes and craft replacement history
+
+```sh
+git reset [commit]
+git reset --hard [commit]
+```
+
+## Synchronize Changes
+
+Register a repository bookmark and exchange version history
+
+```sh
+git fetch [bookmark]
+git merge [bookmark]/[branch]
+git push [alias] [branch]
+git pull
+```
