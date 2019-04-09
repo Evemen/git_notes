@@ -152,6 +152,10 @@ git remote add origin git@github.com:jia-zhuang/test.git
 git push origin master
 ```
 
+```sh
+git config --list
+```
+
 # 参考
 
 https://zhuanlan.zhihu.com/p/42427823
