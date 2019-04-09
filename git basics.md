@@ -44,6 +44,35 @@ git会将所有的文件，目录，提交等转化为git对象，压缩存储�
 - ./objects: 所有的Git对象都会存放在这个目录中，对象的SHA1哈希值的前两位是文件夹名称，后38位作为对象文件名
 - ./refs: 这个目录一般包括三个子文件夹，heads、remotes和tags，heads中的文件标识了项目中的各个分支指向的当前commit
 
+```
+.git/
+├── branches
+├── config
+├── description
+├── HEAD
+├── hooks
+│   ├── applypatch-msg.sample
+│   ├── commit-msg.sample
+│   ├── post-update.sample
+│   ├── pre-applypatch.sample
+│   ├── pre-commit.sample
+│   ├── prepare-commit-msg.sample
+│   ├── pre-push.sample
+│   ├── pre-rebase.sample
+│   └── update.sample
+├── info
+│   └── exclude
+├── objects
+│   ├── info
+│   └── pack
+└── refs
+    ├── heads
+    └── tags
+```
+
 ## 参考
 
 https://zhuanlan.zhihu.com/p/44741777
+
+https://yanhaijing.com/git/2014/11/01/my-git-note/
+

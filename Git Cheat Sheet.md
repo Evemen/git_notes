@@ -104,6 +104,10 @@ git reset [commit]
 git reset --hard [commit]
 ```
 
+还有git revert更推荐使用（在使用remote repo和collaboration时）
+
+参考[如何在 Git 中重置、恢复，返回到以前的状态](https://zhuanlan.zhihu.com/p/42081574)
+
 ## Synchronize Changes
 
 Register a repository bookmark and exchange version history
@@ -114,3 +118,44 @@ git merge [bookmark]/[branch]
 git push [alias] [branch]
 git pull
 ```
+
+## 一些实用的命令
+
+```sh
+# 便捷的查看commit history
+git log --oneline
+git log --oneline master
+git log --oneline branch_1
+```
+
+```sh
+# 修改写错的commit
+git commit --amend
+# 场景：我刚刚的commit忘了add 改动文件了怎么办，不用新建commit，可以直接修改
+git add .
+git commit --amend
+```
+
+```sh
+git reflog
+# 在你眼前的是你用 git 命令的所有历史
+# 每一条历史都有一个序号index，表示为 HEAD@{index}
+# 找到你刚刚闯祸的那条命令 index
+git reset HEAD@{index}
+# 恢复，神奇时光机
+```
+
+```sh
+# 连接远程仓库
+git remote add origin git@github.com:jia-zhuang/test.git
+# 将本地仓库同步到远程仓库
+git push origin master
+```
+
+# 参考
+
+https://zhuanlan.zhihu.com/p/42427823
+
+https://zhuanlan.zhihu.com/p/36749397
+
+https://zhuanlan.zhihu.com/p/40461007
