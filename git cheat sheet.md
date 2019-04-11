@@ -26,11 +26,19 @@ Review edits and craft a commit transaction
 
 ```sh
 git status
-git diff
+git diff # By default git diff will show you any uncommitted changes since the last commit.
 git add [file]
 git diff --staged
 git reset [file]
 git commit -m "[descriptive message]"
+```
+
+The 3 main types of git diff commands:
+
+```sh
+git diff: Show differences between your working directory and the index.
+git diff –cached: Show differences between the index and the most recent commit.
+git diff HEAD: Show the differences between your working directory and the most recent commit.
 ```
 
 ## Group Changes
@@ -50,8 +58,8 @@ git branch -d [branch-name]
 Relocate and remove versioned files
 
 ```sh
-git rm [filename]
-git rm --cached [filename]
+git rm [filename] # removes the file from the repo but also deletes it from the local file system.
+git rm --cached [filename] # To remove the file from the repo and not delete it from the local file system use:
 git mv [file-original] [file-renamed]
 ```
 
@@ -163,3 +171,7 @@ https://zhuanlan.zhihu.com/p/42427823
 https://zhuanlan.zhihu.com/p/36749397
 
 https://zhuanlan.zhihu.com/p/40461007
+
+https://www.atlassian.com/git/tutorials/saving-changes/git-diff
+
+http://gitguys.com/topics/git-diff/
