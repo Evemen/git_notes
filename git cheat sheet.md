@@ -9,6 +9,8 @@ cat ~/.gitconfig
 git config --global user.name "[name]"
 git config --global user.email "[email address]"
 git config --global color.ui auto
+
+
 ```
 
 ## Create Repositories
